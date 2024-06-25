@@ -16,14 +16,22 @@
         // string str = num.ToString();
         // Console.WriteLine(str);
 
-        bool canConvert = int.TryParse("123M", out int number);
-        if (canConvert)
-        {
-            Console.WriteLine(number);
-        }
-        else
-        {
-            Console.WriteLine("Conversion failed");
-        }
+        // bool canConvert = int.TryParse("123M", out int number);
+        // if (canConvert)
+        // {
+        //     Console.WriteLine(number);
+        // }
+        // else
+        // {
+        //     Console.WriteLine("Conversion failed");
+        // }
+
+        double totalValue = 123.50;
+        Console.WriteLine($"O valor total é R$ {totalValue.ToString("F2")}");
+        Console.WriteLine("Digite o número de parcelas:");
+        string? installments = Console.ReadLine();
+        int installmentsNumber = int.TryParse(installments, out int result) ? result : 1;
+        double installmentValue = totalValue / installmentsNumber;
+        Console.WriteLine($"O valor de cada parcela é R$ {installmentValue.ToString("F2")}");
     }
 }
