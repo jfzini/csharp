@@ -1,20 +1,11 @@
-﻿namespace namespaceExample;
-
-//Criando um enum
-enum CardinalPoints
-{
-    Norte,
-    Sul,
-    Leste,
-    Oeste
-};
-
-class Program
+﻿public class Program
 {
     public static void Main()
     {
-        //Utilizando um enum
-        CardinalPoints direction = CardinalPoints.Oeste;
-        Console.WriteLine("Ponto Cardeal: " + direction);
+        long someLongNumber = 51614;
+        // int intNumber = Convert.ToInt32(someLongNumber);
+        int intNumber = (int)someLongNumber;
+
+        Console.WriteLine(intNumber);
     }
 }
